@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville|Source+Sans+Pro&display=swap');
+
+body {
+    background: #ececec;
+    line-height: 1.3em;
+    letter-spacing: 0.0001em;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+
+h1 {
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+h4 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    padding: .3rem 0 1.1rem 0;
+    color: #333;
+    margin: 0;
+}
+
+a {
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 600;
+    color: #3f3f3f;
+}
+
+p.small-title {
+    text-transform: uppercase;
+    font-size: 10px;
+}
+
+.project-link {
+    text-decoration: none;
+    padding: 5px 0;
+    font-size: .8rem;
+}
+
+.project-link::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 95px;
+    background: blue;
+    left: 21px;
+    bottom: 28px;
+    transition: .3s;
+}
+
+.project-link:hover::after {
+    content: '';
+    position: absolute;
+    height: 7px;
+    width: 95px;
+    background: blue;
+    left: 21px;
+    bottom: 28px;
+}
+
+section {
+    height: 50vh;
+    width: 100%;
+    margin: 25vh 0;
+    overflow: hidden;
+}
+
+.overlay {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #ececec;
+    width: 100%;
+    height: 100%;
+}
+
+.box {
+    position: relative;
+}
+
+.project img {
+    width: 100%;
+}
+
+.project-info {
+    background: #fff;
+    padding: 10px 20px 30px 20px;
+}
+
+.d-grid {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-12 {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.project-left .box {
+    grid-column: 3/span 5;
+    grid-row: 1/span 3;
+    width: 100%;
+}
+
+.project-left .project-info {
+    grid-column: 2/span 3;
+    grid-row: 2/span 1;
+}
+
+.project-right .box {
+    grid-column: 6/span 5;
+    grid-row: 1/span 3;
+    width: 100%;
+}
+
+.project-right .project-info {
+    grid-column: 5/span 3;
+    grid-row: 2/span 1;
+}
